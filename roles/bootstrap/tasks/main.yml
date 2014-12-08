@@ -1,0 +1,10 @@
+- user: name=ansible generate_ssh_key=yes ssh_key_bits=2048
+
+- authorized_key: user=ansible key="{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+
+- shell: passwd -l ansible
+
+- template: src={{item}} dest=/etc/{{item}} validate='/usr/sbin/visudo -cf %s' owner=root
+  with_items:
+    - sudoers.d/ansible
+    - sudoers

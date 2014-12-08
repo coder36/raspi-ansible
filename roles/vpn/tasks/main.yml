@@ -1,0 +1,4 @@
+- name: Install openvpn
+  apt: name=openvpn state=installed
+
+- template: src=openvpn/server.conf  

@@ -1,0 +1,6 @@
+- hosts: pi
+  gather_facts: True
+  sudo: True
+  user: pi
+  roles:
+  - role: bootstrap

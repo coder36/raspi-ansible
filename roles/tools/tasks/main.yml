@@ -1,0 +1,7 @@
+- name: Install dev tools
+  apt: name="{{item}}" state=present
+  with_items:
+    - vim
+    - tmux
+    - zsh
+    - git
