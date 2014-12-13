@@ -1,6 +1,6 @@
-- hosts: pi
+- hosts: vpn-clients
   gather_facts: True
   sudo: True
-  user: pi
+  user: vagrant
   roles:
   - role: bootstrap

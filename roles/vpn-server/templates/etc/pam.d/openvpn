@@ -1,0 +1,1 @@
+auth required /etc/openvpn/pam_google_authenticator.so

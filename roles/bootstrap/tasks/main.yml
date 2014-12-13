@@ -4,7 +4,7 @@
 
 - shell: passwd -l ansible
 
-- template: src={{item}} dest=/etc/{{item}} validate='/usr/sbin/visudo -cf %s' owner=root
+- template: src={{item}} dest=/etc/{{item}} validate='/usr/sbin/visudo -cf %s' owner=root mode=0440
   with_items:
     - sudoers.d/ansible
     - sudoers

@@ -1,0 +1,13 @@
+- hosts: pi
+  gather_facts: True
+  sudo: True
+  user: pi
+  roles:
+  - role: bootstrap
+
+- hosts: vpn-clients
+  gather_facts: True
+  sudo: True
+  user: vagrant
+  roles:
+  - role: bootstrap

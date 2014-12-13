@@ -1,0 +1,22 @@
+- name: Install openvpn
+  apt: name={{item}} state=installed
+  with_items:
+    - openvpn
+    - libpam-google-authenticator
+
+- template: src={{item}} dest=/{{item}} mode=0755 owner=root group=root
+  with_items:
+    - etc/openvpn/server.conf
+    - etc/openvpn/static.key
+    - etc/openvpn/ca.cert
+    - etc/openvpn/vpn.cert
+    - etc/openvpn/private.key
+    - etc/openvpn/dh1024.pem
+    - etc/network/if-up.d/openvpn_firewall
+    - etc/pam.d/openvpn
+
+- copy: src=pam_google_authenticator.so dest=/etc/openvpn/pam_google_authenticator.so
+
+- sysctl: name=net.ipv4.ip_forward value=1 state=present
+
+- service: name=openvpn state=restarted
