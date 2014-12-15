@@ -26,13 +26,14 @@ Log in with pi/raspberry
 
 The bootstrap playbook will install an ansible user, and give it the appropriate sudoers rights.
 
+    ssh 127.0.0.1  (selecting yes when asked about key fingerprint, password: raspberry)
+    
+You need to do this to add an entry to the known hosts.
+    
     cd ~/raspi-ansible
     ansible-playbook -i live bootstrap.yml -k     (provide password for pi user)
 
-From here on in, you will not need to provide a password.  You have created effectively an ansible server, with the pi itself acting
-as a ansible node.
-
-
+From here on in, you will not need to provide a password.  You have created effectively an ansible server, with the pi itself acting as a ansible node.
 
 
 
@@ -78,7 +79,9 @@ I found a really good [windows utility](http://sourceforge.net/projects/xca) for
 
     cd ~/raspi-ansible
     ansible-playbook -i live vpn.yml
+    sudo /etc/network/if-up.d/openvpn_firewall
 
+I'm not sure of the openvpn_firewall script is needed.
 
 This will create a client config file: `/etc/openvpn/client.ovpn` which can be imported directly into an openvpn client.
 
