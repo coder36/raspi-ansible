@@ -70,7 +70,7 @@ Edit the `live` inventory file, to include your home network specifics:
 
 You can use the certs and keys provided, however you should really generate your own.  
 
-Place your certs into `/home/vagrant/playbooks/roles/vpn-server/templates/etc/openvpn`, and also generate a new Diffie hellman parameter using:  'openssl dhparam -out dh1024.pem 1024'   
+Place your certs into `/home/vagrant/playbooks/roles/vpn-server/templates/etc/openvpn`, and also generate a new Diffie hellman parameter using:  `openssl dhparam -out dh1024.pem 1024`   
 
 I found a really good [windows utility](http://sourceforge.net/projects/xca) for generating signed certs.
 
