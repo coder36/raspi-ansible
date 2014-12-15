@@ -102,9 +102,9 @@ For each user of your vpn, you will need to generate a user on the raspberry pi,
 
 Log onto the raspberry pi using pi/raspberry
 
-  sudo adduser fred (provide password as 'monday', and go with defaults for the remaining of the prompts)
-  su - fred   (password: monday)
-  google-authenticator  (Answer y to the questions)
+    sudo adduser fred (provide password as 'monday', and go with defaults for the remaining of the prompts)
+    su - fred   (password: monday)
+    google-authenticator  (Answer y to the questions)
 
 This will generate a QR code.  Scan this into your phone using the google authenticator app.  There is also a URL,
 which you could email to the user.  
