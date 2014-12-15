@@ -1,8 +1,0 @@
-- name: Install openvpn
-  apt: name=openvpn state=installed
-
-- template: src=../../vpn-server/templates/etc/openvpn/client.conf dest=/etc/openvpn/server.conf 
-
-- template: src=../../vpn-server/templates/etc/openvpn/ca.cert dest=/etc/openvpn/ca.cert
-
-- service: name=openvpn state=restarted

@@ -7,10 +7,10 @@
 - template: src={{item}} dest=/{{item}} mode=0755 owner=root group=root
   with_items:
     - etc/openvpn/server.conf
-    - etc/openvpn/static.key
     - etc/openvpn/ca.cert
     - etc/openvpn/vpn.cert
     - etc/openvpn/private.key
+    - etc/openvpn/client.ovpn
     - etc/openvpn/dh1024.pem
     - etc/network/if-up.d/openvpn_firewall
     - etc/pam.d/openvpn

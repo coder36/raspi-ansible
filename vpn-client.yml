@@ -1,6 +1,0 @@
-- hosts: vpn-clients
-  gather_facts: True
-  sudo: True
-  user: ansible
-  roles:
-    - role: vpn-client
