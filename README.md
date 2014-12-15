@@ -4,7 +4,7 @@ Set of ansible playbooks for setting up a raspberry pi.
 * dev environment
 
 # Pre-requisites
-* vanilla install of Raspbian  (You should be able to login using pi/raspberry)
+* vanilla install of [Raspbian](http://downloads.raspberrypi.org/raspbian_latest)  (You should be able to login using pi/raspberry)
 
 
 # Ansible setup
