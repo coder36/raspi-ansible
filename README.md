@@ -61,7 +61,7 @@ Edit the `live` inventory file, to include your home network specifics:
     [pi]
     127.0.0.1 isp_ip="123.1.12.22" local_lan="192.168.101.0" local_lan_mask="255.255.255.0" vpn_lan="10.8.0.0" vpn_lan_mask="255.255.255.0"
 
-* The isp_ip should be set (your ip address)[http://www.whatsmyip.org/].  This will change over time, so you could set up a (noip)[http://www.noip.com] url.   
+* The isp_ip should be set [your ip address](http://www.whatsmyip.org/).  This will change over time, so you could set up a [noip](http://www.noip.com) url.   
 * The local_lan will be made available on the machine connected by the VPN.
 * The vpn_lan is the subnet range, which will be allocated to each of the vpn clients.
 
@@ -76,8 +76,8 @@ I found a really good [windows utility](http://sourceforge.net/projects/xca) for
 
 ## Apply the vpn playbook
 
-  cd ~/raspi-ansible
-  ansible-playbook -i live vpn.yml
+    cd ~/raspi-ansible
+    ansible-playbook -i live vpn.yml
 
 
 This will create a client config file: `/etc/openvpn/client.ovpn` which can be imported directly into an openvpn client.
@@ -87,7 +87,7 @@ This will create a client config file: `/etc/openvpn/client.ovpn` which can be i
 
 * Forward port 1194 (UDP) to your raspberry pi.
 
-Sign up for (noip)[http://www.noip.com].  It's free and allows you to connect to your home network using a publically avaialle DNS enter... ie. fredshomerouter.hopto.org.  You may be able to configure your home router to automatically update noip with your ISP assigned ip address.
+Sign up for [noip](http://www.noip.com).  It's free and allows you to connect to your home network using a publically avaialle DNS enter... ie. fredshomerouter.hopto.org.  You may be able to configure your home router to automatically update noip with your ISP assigned ip address.
 
 
 ## Testing
