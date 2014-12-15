@@ -1,2 +1,2 @@
 [pi]
-192.168.101.94 local_lan="192.168.101.0" local_lan_mask="255.255.255.0" vpn_lan="10.8.0.0" vpn_lan_mask="255.255.255.0"
+127.0.0.1 local_lan="192.168.101.0" local_lan_mask="255.255.255.0" vpn_lan="10.8.0.0" vpn_lan_mask="255.255.255.0"
